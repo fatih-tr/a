@@ -144,7 +144,7 @@ clearFileInput("files");
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 image = document.getElementById("source");
-ctx.drawImage(image, 1, 1, 299, 299, 0, 0, 299, 299);
+ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
 
 function readURL() {
           var myimg = document.getElementById("source");
@@ -167,7 +167,7 @@ document.querySelector('#myfile').addEventListener('change',function(){
 function drawimg(idata) {
   var img = new Image();
   img.onload = function(){
-    ctx.drawImage(img, 33, 71, 104, 124, 21, 20, 87, 104);
+    ctx.drawImage(img, 1, 1, 600, 600, 0, 0, 299, 299);
   };
   img.src = idata;
 }
