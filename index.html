@@ -132,6 +132,10 @@ clearFileInput("files");
  foo()
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
+
+.row {
+  display: none
+}	
 	
 <div class="row">
 		<div class="col-md-6">
@@ -157,8 +161,6 @@ clearFileInput("files");
 		    viewport: { width: 150, height: 150 },
 		    boundary: { width: 300, height: 300 },
 		});
-		
-		$('#hidden-demo').Croppie('bind')
 		
 		vanilla.bind({
 		    url: 'dataset/test/test_image_1.jpg',
