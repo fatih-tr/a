@@ -130,5 +130,48 @@ clearFileInput("files");
  foo()
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
+	
+<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<div id="demo-basic">
+	            </div>
+	            <button class="btn btn-success upload-result">Cortar imagen</button>
+			</div>
+        </div>
+        <div class="col-md-6">
+			<div id="upload-demo-i" style="background:#e1e1e1;width:300px;padding:30px;height:300px;margin-top:30px">
+			</div>
+  		</div>
+	</div>
+
+	<script src="ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+	<script src="node_modules/croppie/croppie.js"></script>
+
+	<script type="text/javascript">
+		var el = document.getElementById('demo-basic');
+		var vanilla = new Croppie(el, {
+		    viewport: { width: 150, height: 150 },
+		    boundary: { width: 300, height: 300 },
+		});
+		
+		vanilla.bind({
+		    url: 'dataset/test_image_1.jpg',
+		    points: [77,77,200,200]
+		});
+		
+		//on button click
+		document.querySelector('.upload-result').addEventListener('click', function (ev) {
+			vanilla.result({
+				type: 'canvas'
+			}).then(function (canvas) {
+				html = '<img src="' + canvas + '" />';
+				$("#upload-demo-i").html(html);
+			});
+		});
+	</script>
+	
+	
 </body>
 </html>
