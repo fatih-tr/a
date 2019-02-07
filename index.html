@@ -163,19 +163,19 @@ clearFileInput("files");
 		});
 		
 		//on button click
-		document.querySelector('.upload-result').addEventListener('click', function (ev) {
+		// document.querySelector('.upload-result').addEventListener('click', function (ev) {
 			vanilla.result({
 				type: 'canvas'
 			}).then(function (canvas) {
 				html = '<img src="' + canvas + '" />';
 				$("#upload-demo-i").html(html);
 			});
-		});
+		//});
 	</script>
 	
-<script>	
-$('.row').hide();	
-</script>
+// <script>	
+// $('.row').hide();	
+// </script>
 	
 </body>
 </html>
