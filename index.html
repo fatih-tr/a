@@ -116,7 +116,7 @@ clearFileInput("files");
 
      // Closure to capture the file information.
      reader.onload = (function(theFile) {
-	document.getElementById('btn btn-success upload-result').click();
+	document.getElementById('btn').click();
        return function(e) {
          // Render thumbnail.
          var span = document.createElement('span');
@@ -139,7 +139,7 @@ clearFileInput("files");
 			<div class="form-group">
 				<div id="demo-basic">
 	            </div>
-	            <button class="btn btn-success upload-result">Kırp</button>
+	            <button class="btn" clientidmode="Static">Kırp</button>
 			</div>
         </div>
         <div class="col-md-6">
@@ -148,8 +148,8 @@ clearFileInput("files");
   		</div>
 	</div>
 
-	<script src="ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="node_modules/croppie/croppie.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="croppie.js"></script>
 
 	<script type="text/javascript">
 		var el = document.getElementById('demo-basic');
