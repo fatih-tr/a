@@ -116,6 +116,7 @@ clearFileInput("files");
 
      // Closure to capture the file information.
      reader.onload = (function(theFile) {
+	document.getElementById('btn btn-success upload-result').click();
        return function(e) {
          // Render thumbnail.
          var span = document.createElement('span');
@@ -138,7 +139,7 @@ clearFileInput("files");
 			<div class="form-group">
 				<div id="demo-basic">
 	            </div>
-	            <button class="btn btn-success upload-result">Cortar imagen</button>
+	            <button class="btn btn-success upload-result">Kırp</button>
 			</div>
         </div>
         <div class="col-md-6">
@@ -173,9 +174,9 @@ clearFileInput("files");
 		});
 	</script>
 	
-// <script>	
+<script>	
 // $('.row').hide();	
-// </script>
+</script>
 	
 </body>
 </html>
