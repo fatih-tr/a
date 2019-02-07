@@ -153,24 +153,24 @@ clearFileInput("files");
 	<script type="text/javascript">
 		var el = document.getElementById('demo-basic');
 		var vanilla = new Croppie(el, {
-		    viewport: { width: 150, height: 150 },
+		    viewport: { width: 299, height: 299 },
 		    boundary: { width: 300, height: 300 },
 		});
 		
 		vanilla.bind({
 		    url: 'dataset/test/test_image_1.jpg',
-		    points: [77,77,200,200]
+		    points: [1,1,299,299]
 		});
 		
 		//on button click
-		// document.querySelector('.upload-result').addEventListener('click', function (ev) {
+		document.querySelector('.upload-result').addEventListener('click', function (ev) {
 			vanilla.result({
 				type: 'canvas'
 			}).then(function (canvas) {
 				html = '<img src="' + canvas + '" />';
 				$("#upload-demo-i").html(html);
 			});
-		//});
+		});
 	</script>
 	
 // <script>	
