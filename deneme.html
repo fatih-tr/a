@@ -65,7 +65,7 @@
 	console.log(img_path);
 	var img = new Image();
     	img.src = img_path;
-	 
+	alert("Model ve Resim yüklendikten sonra tahmin et tuşuna basınız.");
 	 
 	const canvas = document.getElementById('canvas');
 	const ctx = canvas.getContext('2d');
@@ -172,7 +172,7 @@ function readURL() {
             reader.onload = function (e) {
             console.log("changed");
               myimg.src = e.target.result;
-	      alert("Resim yüklendikten sonra tahmin et tuşuna basınız.");
+	      alert("Model ve Resim yüklendikten sonra tahmin et tuşuna basınız.");
               drawimg(e.target.result);
             }
             reader.readAsDataURL(input.files[0]);
