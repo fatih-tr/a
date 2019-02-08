@@ -69,7 +69,9 @@
 	 
 	const canvas = document.getElementById('canvas');
 	const ctx = canvas.getContext('2d');
-	ctx.drawImage(img, 1, 1, 299, 299);
+	 img.onload = function(){
+   		ctx.drawImage(img, 1, 1, 299, 299);
+ 	 };
 	 
 	 
 	//var span = document.createElement('span');
