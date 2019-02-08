@@ -172,8 +172,10 @@ function drawimg(idata) {
   var img = new Image();
   img.onload = function(){
     ctx.drawImage(img, 1, 1, 600, 600, 0, 0, 299, 299);
+    var imageData = ctx.toDataURL();
   };
-  img.src = idata;
+  img.src = imageData;
+	//img.src = idata;
 }
 	</script>	
 	
