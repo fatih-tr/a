@@ -89,7 +89,12 @@
 <p align="center">
 <button id="demo-image-button" class="input-button" onclick="loadDemoImage()">Veritabanından rastgele resim yükle</button>
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
-<output id="list"></output>
+<output id="list">
+<canvas id="canvas" width="299" height="299"></canvas>
+<div style="display:none;">
+<img class="thumb" width="299" height="299">
+</div>	
+</output>
 <button type="button" value="Submit" onclick = "start()">Tahmin Et</button> 
 </p>
 <script>
@@ -132,16 +137,7 @@ clearFileInput("files");
  }
  foo()
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script>
-	
-	
-<canvas id="canvas" width="299" height="299"></canvas>
-<div style="display:none;">
-  <img id="source" width="299" height="299">
-</div>
-
- <input type="file"  id="myfile">	
-	
+</script>	
 	
 <script>	
 const canvas = document.getElementById('canvas');
@@ -151,7 +147,7 @@ ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
 
 function readURL() {
           var myimg = document.getElementById("source");
-          var input = document.getElementById("myfile");
+          var input = document.getElementById("files");
           if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function (e) {
@@ -163,7 +159,7 @@ function readURL() {
           }
 }
 
-document.querySelector('#myfile').addEventListener('change',function(){
+document.querySelector('#files').addEventListener('change',function(){
     readURL()
 });
 
