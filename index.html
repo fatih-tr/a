@@ -4,7 +4,7 @@
 
     <!-- TensorFlow.js script -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
-
+<script> alert("Model ve seçtiğiniz resim yüklendikten sonra tahmin et tuşuna basınız."); </script>
 <script
  src="https://code.jquery.com/jquery-3.3.1.js"
  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -65,7 +65,6 @@
 	console.log(img_path);
 	var img = new Image();
     	img.src = img_path;
-	alert("Model ve Resim yüklendikten sonra tahmin et tuşuna basınız.");
 	 
 	const canvas = document.getElementById('canvas');
 	const ctx = canvas.getContext('2d');
@@ -172,7 +171,6 @@ function readURL() {
             reader.onload = function (e) {
             console.log("changed");
               myimg.src = e.target.result;
-	      alert("Model ve Resim yüklendikten sonra tahmin et tuşuna basınız.");
               drawimg(e.target.result);
             }
             reader.readAsDataURL(input.files[0]);
