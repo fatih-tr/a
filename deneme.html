@@ -158,6 +158,8 @@ clearFileInput("files");
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 image = document.getElementById("source");
+	
+alert(image.height);
 ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
 
 function readURL() {
