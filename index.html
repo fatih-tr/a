@@ -119,10 +119,18 @@ clearFileInput("files");
        return function(e) {
          // Render thumbnail.
 	 
-	 alert(e.target.result);
+	 
 	 
 
 const canvas = document.getElementById('canvas');
+
+if (canvas != null) {
+  
+} else {
+  alert("KANVAS OKUNMADI");
+}
+	       
+	       
 const ctx = canvas.getContext('2d');
 image = document.getElementById("source");
 ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
