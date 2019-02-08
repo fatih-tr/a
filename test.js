@@ -117,8 +117,8 @@ async function start(){
 	var canvas = document.getElementById('canvas');
     	var ctx = canvas.getContext("2d");
     	var img = ctx.getImageData(1, 1, 299, 299);
-    	alert("Width of imgData is: " + img.width);
-    	ctx.putImageData(img, 10, 70);
+    	//alert("Width of imgData is: " + img.width);
+    	//ctx.putImageData(img, 10, 70);
 	
 	
         model = await tf.loadModel('model2/model.json')
