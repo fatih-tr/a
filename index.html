@@ -116,6 +116,9 @@ clearFileInput("files");
      reader.onload = (function(theFile) {
        return function(e) {
          // Render thumbnail.
+	 
+	 alert(e.target.result.height);
+	 
          var span = document.createElement('span');
          span.innerHTML = ['<img class="thumb" src="', e.target.result,
                            '" title="', escape(theFile.name), '"/>'].join('');
