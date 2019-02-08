@@ -136,7 +136,9 @@ clearFileInput("files");
 	
 <output id="list">
 <canvas id="canvas" width="299" height="299"></canvas>
-</output>	
+</output>
+	
+	tktmtmtltl
 <div>
   <img id="source" width="299" height="299">
 </div>
@@ -149,7 +151,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 image = document.getElementById("source");
 ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
-
+    var imageData = ctx.toDataURL();
+  	image.src = imageData;
 function readURL() {
           var myimg = document.getElementById("source");
           var input = document.getElementById("myfile");
@@ -172,8 +175,6 @@ function drawimg(idata) {
   var img = new Image();
   img.onload = function(){
     ctx.drawImage(img, 1, 1, 600, 600, 0, 0, 299, 299);
-    var imageData = ctx.toDataURL();
-  	img.src = imageData;
   };
 	//img.src = idata;
 }
