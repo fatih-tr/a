@@ -132,7 +132,8 @@ if (canvas != null) {
 	       
 	       
 const ctx = canvas.getContext('2d');
-image = document.getElementById("source");
+image = e.target.result;
+	//document.getElementById("source");
 ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
 
           var myimg = document.getElementById("source");
