@@ -172,7 +172,7 @@ function readURL() {
             reader.onload = function (e) {
             console.log("changed");
               myimg.src = e.target.result;
-	      alert(myimg.height);
+	      alert("Resim yüklendikten sonra tahmin et tuşuna basınız.");
               drawimg(e.target.result);
             }
             reader.readAsDataURL(input.files[0]);
