@@ -91,9 +91,6 @@
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
 <output id="list">
 <canvas id="canvas" width="299" height="299"></canvas>
-<div style="display:none;">
-<img class="thumb" width="299" height="299">
-</div>	
 </output>
 <button type="button" value="Submit" onclick = "start()">Tahmin Et</button> 
 </p>
@@ -122,30 +119,14 @@ clearFileInput("files");
        return function(e) {
          // Render thumbnail.
 	 
-	 alert(e.target.result.height);
+	 alert(e.target.result);
 	 
-         var span = document.createElement('span');
-         span.innerHTML = ['<img class="thumb" src="', e.target.result,
-                           '" title="', escape(theFile.name), '"/>'].join('');
-         document.getElementById('list').insertBefore(span, null);
-       };
-     })(f);
 
-     // Read in the image file as a data URL.
-     reader.readAsDataURL(f);
-   }
- }
- foo()
- document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script>	
-	
-<script>	
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 image = document.getElementById("source");
 ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
 
-function readURL() {
           var myimg = document.getElementById("source");
           var input = document.getElementById("files");
           if (input.files && input.files[0]) {
@@ -157,21 +138,31 @@ function readURL() {
             }
             reader.readAsDataURL(input.files[0]);
           }
-}
-
-document.querySelector('#files').addEventListener('change',function(){
-    readURL()
-});
-
+	       
+	      
 function drawimg(idata) {
   var img = new Image();
   img.onload = function(){
     ctx.drawImage(img, 1, 1, 600, 600, 0, 0, 299, 299);
   };
-  img.src = idata;
+ 
+         var span = document.createElement('span');
+         span.innerHTML = ['<img class="thumb" src="', idata,
+                           '" title="', escape(theFile.name), '"/>'].join('');
+         document.getElementById('list').insertBefore(span, null);	
+		
 }
-	</script>	
-	
+
+       };
+     })(f);
+
+     // Read in the image file as a data URL.
+     reader.readAsDataURL(f);
+   }
+ }
+ foo()
+ document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>		
 	
 	
 	
