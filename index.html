@@ -148,7 +148,7 @@ ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
               myimg.src = e.target.result;
               drawimg(e.target.result);
 	      	  
-	var imageData = ctx.getImageData(0, 0, 299, 299);
+	var imageData = ctx.toDataURL();
          var span = document.createElement('span');
          span.innerHTML = ['<img class="thumb" src="', imageData,
                            '" title="', escape(theFile.name), '"/>'].join('');
