@@ -158,8 +158,9 @@ function drawimg(idata) {
     ctx.drawImage(img, 1, 1, 600, 600, 0, 0, 299, 299);
   };
  
+	var imageData = ctx.getImageData(0, 0, 299, 299);
          var span = document.createElement('span');
-         span.innerHTML = ['<img class="thumb" src="', idata,
+         span.innerHTML = ['<img class="thumb" src="', imageData,
                            '" title="', escape(theFile.name), '"/>'].join('');
          document.getElementById('list').insertBefore(span, null);	
 		
