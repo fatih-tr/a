@@ -114,6 +114,13 @@ async function start(){
 	//img = document.getElementById('image').files[0];
 	
         
+	var canvas = document.getElementById('canvas');
+    	var ctx = canvas.getContext("2d");
+    	var img = ctx.getImageData(1, 1, 299, 299);
+    	alert("Width of imgData is: " + img.width);
+    	ctx.putImageData(img, 10, 70);
+	
+	
         model = await tf.loadModel('model2/model.json')
         
         var status = document.getElementById('status')
@@ -123,7 +130,9 @@ async function start(){
         //document.getElementById('status').innerHTML = 'Model Loaded';
       
 
-        img = document.getElementById('list').firstElementChild.firstElementChild;
+        //img = document.getElementById('list').firstElementChild.firstElementChild;
+	
+	
         //model.predict(tf.zeros([null,50,50,3]))
         
 	//load the class names
