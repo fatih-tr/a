@@ -98,6 +98,9 @@ clearFileInput("files");
 </script>    
 
 <canvas id="canvas" width="299" height="299"></canvas>	
+<div style="display:none;">
+  <img id="source" width="299" height="299">
+</div>	
 <script> 
   
  function handleFileSelect(evt) {
@@ -132,7 +135,7 @@ if (canvas != null) {
 	       
 	       
 const ctx = canvas.getContext('2d');
-image = e.target.result;
+image = document.getElementById("source");
 	//document.getElementById("source");
 ctx.drawImage(image, 1, 1, 600, 600, 0, 0, 299, 299);
 
