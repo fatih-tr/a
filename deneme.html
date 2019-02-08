@@ -63,12 +63,13 @@
 	var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 	img_path = base_path + randomnumber + ".jpg"
 	console.log(img_path);
-	 
+	var img = new Image();
+    	img.src = img_path;
 	 
 	 
 	const canvas = document.getElementById('canvas');
 	const ctx = canvas.getContext('2d');
-	ctx.drawImage(img_path, 1, 1, 299, 299, 0, 0, 299, 299);
+	ctx.drawImage(img, 1, 1, 299, 299);
 	 
 	 
 	//var span = document.createElement('span');
