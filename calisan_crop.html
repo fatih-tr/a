@@ -89,7 +89,7 @@
 <p align="center">
 <button id="demo-image-button" class="input-button" onclick="loadDemoImage()">Veritabanından rastgele resim yükle</button>
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
-<output id="list"></output>
+<output id="list2"></output>
 <button type="button" value="Submit" onclick = "start()">Tahmin Et</button> 
 </p>
 <script>
@@ -134,8 +134,9 @@ clearFileInput("files");
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
 	
-	
+<output id="list">
 <canvas id="canvas" width="299" height="299"></canvas>
+</output>	
 <div style="display:none;">
   <img id="source" width="299" height="299">
 </div>
