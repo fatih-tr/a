@@ -77,8 +77,8 @@ function preprocess(img)
     // Normalize the image 
     const offset = tf.scalar(255.0);
     //const normalized = tf.scalar(1.0).sub(resized.div(offset));
-    console.log(tensor.print(verbose));
-    console.log(offset.print(verbose));
+    console.log(tensor.print());
+    console.log(offset.print());
     const normalized = tensor.div(offset);
     //We add a dimension to get a batch shape 
     const batched = normalized.expandDims(0)
