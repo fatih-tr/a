@@ -72,7 +72,7 @@ function preprocess(img)
  	console.log(img.height)
     //convert the image data to a tensor 
 	
-   let img = tf.fromPixels(img).toFloat();
+   img = tf.fromPixels(img).toFloat();
    let normalized = img.div(tf.scalar(255));
 /*
     let tensor = tf.fromPixels(img)
